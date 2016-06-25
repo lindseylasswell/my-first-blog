@@ -3,11 +3,16 @@
         <title>Lindsey's Blog</title>
     </head>
     <body>
-        <h1> Let's talk about wonderously amazing things!</h1>
-        <a href="http://www.bvswlmc.com/">Our library website! </a>
+      <div>
+  <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-        <p>Hi there!</p>
-        <p>It works!</p>
-        <ul><li>first post</li><li>ssecond post</li></ul>
+{% for post in posts %}
+  <div>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
     </body>
 </html>
